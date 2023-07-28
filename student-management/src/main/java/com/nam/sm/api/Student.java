@@ -38,4 +38,10 @@ public class Student {
 		this.country = country;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", mobile=" + mobile + ", country=" + country + "]";
+	}
+	
+	
 }

@@ -22,9 +22,7 @@ public class StudentController {
 		List<Student> studentList = studentDAO.loadStudents();
 		
 		model.addAttribute("students", studentList);
-		for(Student temp:studentList) {
-			System.out.println(temp);
-		}
+
 		return "student-list";
 	}
 }
