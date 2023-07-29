@@ -1,9 +1,9 @@
 package com.nam.sm.api;
 
 public class StudentDTO {
-	private String name="nam";
-	private long mobile=123;
-	private String country="432";
+	private String name;
+	private Long mobile;
+	private String country;
 
 	public String getName() {
 		return name;
@@ -13,11 +13,11 @@ public class StudentDTO {
 		this.name = name;
 	}
 
-	public long getMobile() {
+	public Long getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(long mobile) {
+	public void setMobile(Long mobile) {
 		this.mobile = mobile;
 	}
 
@@ -27,6 +27,11 @@ public class StudentDTO {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	@Override
+	public String toString() {
+		return "StudentDTO [name=" + name + ", mobile=" + mobile + ", country=" + country + "]";
 	}
 
 }

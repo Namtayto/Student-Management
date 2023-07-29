@@ -38,7 +38,10 @@ public class StudentController {
 	
 	@ResponseBody
 	@GetMapping("/save-student")
-	public String saveStudent() {
+	public String saveStudent(StudentDTO studentDTO) {
+		System.out.println(studentDTO);
+		
+		studentDAO.saveStudent(studentDTO);
 		
 		return "Student saved...";
 	}
