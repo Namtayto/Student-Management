@@ -7,10 +7,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-	<i>Student data ....</i>
+<body>	
+	
 
 	<div align="center">
+	
+	<form action="showAddStudentPage">
+		<input type="submit" value="ADD">
+	</form>
+	
 		<table border="1">
 			<thead>
 				<tr>

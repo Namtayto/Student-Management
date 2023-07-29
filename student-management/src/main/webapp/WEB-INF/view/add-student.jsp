@@ -12,7 +12,7 @@
 		<h3>Add Student</h3>
 		<!-- Create a spring form where user can enter student data -->
 
-		<form:form action="save-student" modelAttribute="student" method="GET">
+		<form:form action="save-student" modelAttribute="student" method="POST">
 			<p>
 				<label>Name: </label>
 				<form:input path="name" />
