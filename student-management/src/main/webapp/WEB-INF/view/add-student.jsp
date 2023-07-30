@@ -13,6 +13,8 @@
 		<!-- Create a spring form where user can enter student data -->
 
 		<form:form action="save-student" modelAttribute="student" method="POST">
+			<form:hidden path="id"/>
+			
 			<p>
 				<label>Name: </label>
 				<form:input path="name" />

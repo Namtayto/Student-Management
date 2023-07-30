@@ -12,7 +12,8 @@ public class StudentDTORowMapper implements RowMapper<StudentDTO> {
 	@Override
 	public StudentDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
 		StudentDTO newStudent = new StudentDTO();
-
+		
+		newStudent.setId(rs.getInt("id"));
 		newStudent.setName(rs.getString("name"));
 		newStudent.setMobile(rs.getLong("mobile"));
 		newStudent.setCountry(rs.getString("country"));

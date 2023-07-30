@@ -1,6 +1,7 @@
 package com.nam.sm.api;
 
 public class StudentDTO {
+	private int id;
 	private String name;
 	private Long mobile;
 	private String country;
@@ -29,9 +30,19 @@ public class StudentDTO {
 		this.country = country;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Override
 	public String toString() {
-		return "StudentDTO [name=" + name + ", mobile=" + mobile + ", country=" + country + "]";
+		return "StudentDTO [id=" + id + ", name=" + name + ", mobile=" + mobile + ", country=" + country + "]";
 	}
+
+		
 
 }

@@ -11,4 +11,8 @@ public interface StudentDAO {
 	void saveStudent(StudentDTO studentDTO);
 	
 	StudentDTO getStudentDTO(int id);
+	
+	void updateStudent(StudentDTO studentDTO);
+	
+	
 }

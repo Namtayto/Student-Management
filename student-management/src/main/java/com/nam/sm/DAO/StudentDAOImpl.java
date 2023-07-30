@@ -45,4 +45,12 @@ public class StudentDAOImpl implements StudentDAO {
 		return studentDTO;
 	}
 
+	@Override
+	public void updateStudent(StudentDTO studentDTO) {
+		// TODO Auto-generated method stub
+		String sql = "UPDATE STUDENTS SET name=?, mobile=?, country=? WHERE id=?";
+		Object[] sqlParameters = {studentDTO.getName(),studentDTO.getMobile(),studentDTO.getCountry(),studentDTO.getId()};
+		jdbcTemplate.update(sql,sqlParameters);
+	}
+
 }

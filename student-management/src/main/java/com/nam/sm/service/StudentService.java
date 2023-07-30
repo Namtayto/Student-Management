@@ -11,4 +11,6 @@ public interface StudentService {
 	void saveStudent(StudentDTO studentDTO);
 	
 	StudentDTO geStudentDTO(int id);
+
+	void updateStudent(StudentDTO studentDTO);
 }
