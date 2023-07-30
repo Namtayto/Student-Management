@@ -11,17 +11,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.nam.sm.DAO.StudentDAO;
 import com.nam.sm.api.Student;
 import com.nam.sm.api.StudentDTO;
+import com.nam.sm.service.StudentService;
 
 @Controller
 public class StudentController {
 	
 	@Autowired
-	private StudentDAO studentDAO;
+	private StudentService studentService;
 	
 	@GetMapping("/showStudent")
 	public String showStudentList(Model model) {
 		
-		List<Student> studentList = studentDAO.loadStudents();
+		List<Student> studentList = studentService.loadStudents();
 		
 		model.addAttribute("students", studentList);
 
@@ -40,7 +41,7 @@ public class StudentController {
 	public String saveStudent(StudentDTO studentDTO) {
 		System.out.println(studentDTO);
 		
-		studentDAO.saveStudent(studentDTO);
+		studentService.saveStudent(studentDTO);
 		
 		return "redirect:/showStudent";
 	}
