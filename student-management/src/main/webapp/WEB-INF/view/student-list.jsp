@@ -34,6 +34,7 @@
 					<td>${student.name}</td>
 					<td>${student.mobile}</td>
 					<td>${student.country}</td>
+					<td><a href="updateStudent?userId=${student.id}">Update</a></td>
 				</tr>
 				<br />
 			</c:forEach>

@@ -2,13 +2,13 @@ package com.nam.sm.DAO;
 
 import java.util.List;
 
-import org.apache.jasper.compiler.NewlineReductionServletWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.nam.sm.api.Student;
 import com.nam.sm.api.StudentDTO;
+import com.nam.sm.rowmapper.StudentDTORowMapper;
 import com.nam.sm.rowmapper.StudentRowMapper;
 
 @Repository
@@ -33,6 +33,16 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		jdbcTemplate.update(sql,sqlParameters);
 		
+		
+	}
+
+	@Override
+	public StudentDTO getStudentDTO(int id) {
+		String sql = "SELECT * FROM STUDENTS WHERE ID = ?";
+		
+		
+		StudentDTO studentDTO = jdbcTemplate.queryForObject(sql, new StudentDTORowMapper(),id);
+		return studentDTO;
 	}
 
 }

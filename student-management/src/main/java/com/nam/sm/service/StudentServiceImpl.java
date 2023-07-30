@@ -27,4 +27,10 @@ public class StudentServiceImpl implements StudentService {
 		
 	}
 
+	@Override
+	public StudentDTO geStudentDTO(int id) {
+		
+		return studentDAO.getStudentDTO(id);
+	}
+
 }
