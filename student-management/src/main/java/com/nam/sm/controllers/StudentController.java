@@ -59,5 +59,14 @@ public class StudentController {
 
 		return "add-student";
 	}
+	
+	@GetMapping("/deleteStudent")
+	public String deleteStudent(@RequestParam("userId") int id) {
+
+		studentService.deleteStudent(id);
+
+
+		return "redirect:/showStudent";
+	}
 
 }
